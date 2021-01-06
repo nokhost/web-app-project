@@ -1,4 +1,4 @@
-const controller = require('app/')
+const controller = require('./cntroller')
 
 class homeController extends controller{
 
