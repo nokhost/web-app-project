@@ -1,4 +1,4 @@
-const controller = require("../cntroller")
+const controller = require("../controller")
 
 class indexController extends controller {
 

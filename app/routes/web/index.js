@@ -7,7 +7,7 @@ router.use('/admin', adminRouter)
 
 //home Router
 const homeRouter =require( './home')
-router.use('/home', homeRouter)
+router.use('/', homeRouter)
 
 
 

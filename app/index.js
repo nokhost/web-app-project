@@ -4,7 +4,7 @@ const http = require("http");
 const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-const validator = require("express-validator");
+const validator = require('express-validator');
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const mongoose = require("mongoose");
@@ -42,8 +42,7 @@ module.exports = class Application {
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
-    // console.log(validator)
-    // app.use(validator());
+    app.use(validator());
     app.use(
       session({
         secret: "mysecretkey",
@@ -57,7 +56,7 @@ module.exports = class Application {
   }
 
   setRuters() {
-    app.use(require('app/routes/api'))
-    app.use(require('app/routes/web'))
+    app.use(require('./routes/api'))
+    app.use(require('./routes/web'))
   }
 };

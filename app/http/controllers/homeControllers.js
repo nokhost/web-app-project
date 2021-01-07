@@ -1,14 +1,11 @@
-const controller = require('./cntroller')
+const controller = require('./controller')
 
 class homeController extends controller{
 
     index(req, res) {
 
-        res.json(this.message);
+        res.render('home')
 
-    }
-    message() {
-        return 'home page'
     }
 
 }
